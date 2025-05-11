@@ -45,6 +45,10 @@ $ npm run start:dev
 $ npm run start:prod
 ```
 
+## Swagger Docs
+
+Available on http://localhost:3000/swagger when running locally
+
 ## Run tests
 
 ```bash
