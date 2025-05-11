@@ -13,9 +13,6 @@ jobs:
   test-and-build-backend:
     name: Test & Build Backend
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: ./flag-explorer-api
     permissions:
       contents: read
       packages: write
@@ -43,8 +40,7 @@ jobs:
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         uses: docker/build-push-action@v5
         with:
-          context: ./flag-explorer-api
-          file: ./Dockerfile
+          file: Dockerfile
           push: true
           tags: |
             ${{ env.DOCKER_IMAGE_BACKEND }}:latest
