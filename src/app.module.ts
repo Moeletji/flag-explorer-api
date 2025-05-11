@@ -1,6 +1,6 @@
 import { Module } from '@nestjs/common';
-import { CountriesModule } from './countries/countries.module';
-import { ExternalApiModule } from './external-api/external-api.module';
+import { CountriesModule } from './modules/countries/countries.module';
+import { ExternalApiModule } from './modules/external-api/external-api.module';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { CacheModule } from '@nestjs/cache-manager';
 
